@@ -47,3 +47,9 @@ movieLine.push("cooler");
 console.log("array after push method " + movieLine);
 movieLine.pop();
 console.log("array after pop method " + movieLine);
+
+console.log("array before shift method " + movieLine);
+movieLine.shift();
+console.log("array after shift method " + movieLine);
+movieLine.unshift('cell');
+console.log("array after unshift method " + movieLine);
