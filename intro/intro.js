@@ -95,5 +95,4 @@ let comments = [
     { username: 'Tammy', text: 'lololol', votes: 9 },
     { username: 'BballLover', text: 'ball out!!', votes: 19 }
 ]
-
 console.log(comments[1].username + ' commented on your post: ' + comments[1].text);
