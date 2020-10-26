@@ -41,15 +41,31 @@
 // }
 
 // ARRAY PRACTICE
-let movieLine = ['tom', 'goku', 'frieza'];
-console.log("array before push method " + movieLine);
-movieLine.push("cooler");
-console.log("array after push method " + movieLine);
-movieLine.pop();
-console.log("array after pop method " + movieLine);
 
-console.log("array before shift method " + movieLine);
-movieLine.shift();
-console.log("array after shift method " + movieLine);
-movieLine.unshift('cell');
-console.log("array after unshift method " + movieLine);
+// let movieLine = ['tom', 'goku', 'frieza'];
+// console.log("array before push method " + movieLine);
+// movieLine.push("cooler");
+// console.log("array after push method " + movieLine);
+// movieLine.pop();
+// console.log("array after pop method " + movieLine);
+
+// console.log("array before shift method " + movieLine);
+// movieLine.shift();
+// console.log("array after shift method " + movieLine);
+// movieLine.unshift('cell');
+// console.log("array after unshift method " + movieLine);
+
+// SLICE SPLICE PRACTICE
+
+let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+console.log('array: ' + colors);
+console.log('slice method ' + colors.slice(3)); //takes element 3 and after.
+console.log(colors); //slice doesn't change array after
+
+let warmColors = colors.slice(0, 3); //takes elements from index 0-2, doesnt take element 3(last element)
+console.log('warm colors :' + warmColors);
+
+colors.splice(-1, 1)
+console.log('colors array after splice (removing violet): ' + colors);
+colors.splice(1, 0, 'red-orange');
+console.log('colors after splice (adding red-orange between red and orange):' + colors);
