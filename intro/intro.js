@@ -57,15 +57,43 @@
 
 // SLICE SPLICE PRACTICE
 
-let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-console.log('array: ' + colors);
-console.log('slice method ' + colors.slice(3)); //takes element 3 and after.
-console.log(colors); //slice doesn't change array after
+// let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// console.log('array: ' + colors);
+// console.log('slice method ' + colors.slice(3)); //takes element 3 and after.
+// console.log(colors); //slice doesn't change array after
 
-let warmColors = colors.slice(0, 3); //takes elements from index 0-2, doesnt take element 3(last element)
-console.log('warm colors :' + warmColors);
+// let warmColors = colors.slice(0, 3); //takes elements from index 0-2, doesnt take element 3(last element)
+// console.log('warm colors :' + warmColors);
 
-colors.splice(-1, 1)
-console.log('colors array after splice (removing violet): ' + colors);
-colors.splice(1, 0, 'red-orange');
-console.log('colors after splice (adding red-orange between red and orange):' + colors);
+// colors.splice(-1, 1)
+// console.log('colors array after splice (removing violet): ' + colors);
+// colors.splice(1, 0, 'red-orange');
+// console.log('colors after splice (adding red-orange between red and orange):' + colors);
+
+// //NESTED ARRAYS
+// const gameBoard = [
+//     ['X', 'O', 'X'],
+//     ['X', null, 'O'],
+//     ['X', 'O', 'O']
+// ];
+// console.log(gameBoard);
+// console.log('index of row 0 item 3: ' + gameBoard[0][2]);
+
+//CREATING OBJECTS
+let midterms = {
+    donny: 96,
+    thomas: 70
+};
+
+console.log("Donny's midterm grade is " + midterms.donny);
+midterms.thomas = 'C';
+console.log("Thomas' midterm grade is " + midterms.thomas);
+
+
+//NESTING ARRAYS AND OBJECTS
+let comments = [
+    { username: 'Tammy', text: 'lololol', votes: 9 },
+    { username: 'BballLover', text: 'ball out!!', votes: 19 }
+]
+
+console.log(comments[1].username + ' commented on your post: ' + comments[1].text);
