@@ -21,3 +21,13 @@ function repeat(msg, numTimes) {
     console.log(result);
 }
 repeat("yo yo wassup ", 3);
+
+//return keyword practice
+function add(x, y) {
+    if (typeof x !== 'number' || typeof y !== 'number') {
+        return false;
+    }
+    return x + y;
+}
+console.log(add(1, 2));
+console.log(add(4, 'a')); 
