@@ -82,10 +82,35 @@ const topics = [
 //     console.log(`Visit youtube.com/${topics[i]}`);
 // } //regular use of for loop
 
-for (let category of topics) {
-    console.log(category);
+for (let topic of topics) {
+    console.log(topic);
 }
 
 // for (let char of "wassup my doode") {
 //     console.log(char);
 // }
+
+// Looping through Objects (not common)
+
+// const testScores = {
+//     keenan: 80,
+//     damon: 67,
+//     donny: 90,
+//     naruto: 99,
+//     sasuke: 99,
+//     tobi: 87,
+//     curry: 30,
+//     dame: 0,
+//     klay: 11
+// };
+
+// for (let person in testScores) {
+//     console.log(person);
+// } //first way 
+
+// let total = 0;
+// let scores = Object.values(testScores);
+// for (let score of scores) {
+//     total += score;
+// }
+// console.log(total / scores.length); //second way
