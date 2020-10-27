@@ -13,9 +13,10 @@
 // }
 // console.log("WELCOME TO THE SECRET SOCIETY!!");
 
-let input = prompt("say something")
-while (true) {
-    input = prompt(input)
-    if (input.toLowerCase() === "stop") break;
-}
-console.log("OK ill stop");
+// BREAK PRACTICE
+// let input = prompt("say something")
+// while (true) {
+//     input = prompt(input)
+//     if (input.toLowerCase() === "stop") break;
+// }
+// console.log("OK ill stop");
