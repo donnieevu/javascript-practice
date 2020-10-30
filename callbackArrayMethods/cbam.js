@@ -204,43 +204,121 @@
 // console.log(greatAnime); //uses both filter and map together.
 
 // SOME & EVERY PRACTICE
-const exams = [80, 90, 89, 77, 98, 90, 78, 87, 67, 89, 09, 89, 90]
+// const exams = [80, 90, 89, 77, 98, 90, 78, 87, 67, 89, 09, 89, 90]
 
-const passingGrade = exams.every(score => score >= 75)
-console.log(passingGrade);
+// const passingGrade = exams.every(score => score >= 75)
+// console.log(passingGrade);
 
-const animes = [
-    {
-        title: 'Naruto',
-        score: 30,
-        year: 1999
+// const animes = [
+//     {
+//         title: 'Naruto',
+//         score: 30,
+//         year: 1999
+//     },
+//     {
+//         title: 'Dragon Ball Z',
+//         score: 20,
+//         year: 1989
+//     },
+//     {
+//         title: 'One Piece',
+//         score: 95,
+//         year: 1999
+//     },
+//     {
+//         title: 'Attack On Titan',
+//         score: 50,
+//         year: 2013
+//     },
+//     {
+//         title: 'Full Metal Alchemist Brotherhood',
+//         score: 95,
+//         year: 2009
+//     },
+//     {
+//         title: 'My Hero Academia',
+//         score: 95,
+//         year: 2016
+//     }
+// ]
+
+// let recentMovie = animes.every(anime => anime.year > 2000)
+// console.log(recentMovie);
+
+// REDUCE PRACTICE
+
+// const prices = [9.99, 1.50, 19.99, 49.99, 30.50]
+
+// const total = prices.reduce((total, price) => {
+//     return total + price;
+// })
+// console.log(total);
+
+// const minPrice = prices.reduce((min, price) => {
+//     if (price < min) {
+//         return price;
+//     }
+//     return min;
+// })
+// console.log(minPrice);
+
+// const animes = [
+//     {
+//         title: 'Naruto',
+//         score: 30,
+//         year: 1999
+//     },
+//     {
+//         title: 'Dragon Ball Z',
+//         score: 20,
+//         year: 1989
+//     },
+//     {
+//         title: 'One Piece',
+//         score: 95,
+//         year: 1999
+//     },
+//     {
+//         title: 'Attack On Titan',
+//         score: 50,
+//         year: 2013
+//     },
+//     {
+//         title: 'Full Metal Alchemist Brotherhood',
+//         score: 95,
+//         year: 2009
+//     },
+//     {
+//         title: 'My Hero Academia',
+//         score: 97,
+//         year: 2016
+//     }
+// ]
+
+// const highestRated = animes.reduce((bestAnime, currAnime) => {
+//     if (currAnime.score > bestAnime.score) {
+//         return currAnime;
+//     }
+//     return bestAnime;
+// })
+// console.log(highestRated);
+
+// const evens = [2, 4, 6, 8]
+
+// const totalEven = evens.reduce((sum, num) => sum + num, 100)
+// console.log(totalEven);
+
+// ARROW FUNCTION W/ KEYWORD 'THIS'
+const person = {
+    firstName: 'Naruto',
+    lastName: 'Uzumaki',
+    fullName: function () { //arrow function doesnt work here
+        return `${this.firstName} ${this.lastName}`
     },
-    {
-        title: 'Dragon Ball Z',
-        score: 20,
-        year: 1989
-    },
-    {
-        title: 'One Piece',
-        score: 95,
-        year: 1999
-    },
-    {
-        title: 'Attack On Titan',
-        score: 50,
-        year: 2013
-    },
-    {
-        title: 'Full Metal Alchemist Brotherhood',
-        score: 95,
-        year: 2009
-    },
-    {
-        title: 'My Hero Academia',
-        score: 95,
-        year: 2016
+    shoutName: function () {
+        setTimeout(() => {
+            console.log(this);
+            console.log(this.fullName());
+        }, 3000) //arrow function works here (constant changes makes it ok)
     }
-]
-
-let recentMovie = animes.every(anime => anime.year > 2000)
-console.log(recentMovie);
+}
