@@ -43,10 +43,35 @@
 // }
 // console.log("After");
 
-function yell(msg) {
-    try {
-        console.log(msg.toUpperCase().repeat(3));
-    } catch (e) {
-        console.log('Please pass a string next time');
+// function yell(msg) {
+//     try {
+//         console.log(msg.toUpperCase().repeat(3));
+//     } catch (e) {
+//         console.log('Please pass a string next time');
+//     }
+// }
+
+const solution = (arr) => {
+    // Type your solution here
+    let sumR = 0;
+    let sumL = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            arr.slice(arr[i], 1);
+        }
+        if (i % 2 === 0) {
+            sumR += arr[i];
+            sumR - arr[0];
+        } else if (i % 2 == 1) {
+            sumL += arr[i];
+        }
     }
-}
+    if (sumR > sumL) {
+        return "Right";
+    } else if (sumL > sumR) {
+        return "Left";
+    } else {
+        return "";
+    }
+};
