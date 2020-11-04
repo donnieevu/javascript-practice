@@ -309,16 +309,48 @@
 // console.log(totalEven);
 
 // ARROW FUNCTION W/ KEYWORD 'THIS'
-const person = {
-    firstName: 'Naruto',
-    lastName: 'Uzumaki',
-    fullName: function () { //arrow function doesnt work here
-        return `${this.firstName} ${this.lastName}`
-    },
-    shoutName: function () {
-        setTimeout(() => {
-            console.log(this);
-            console.log(this.fullName());
-        }, 3000) //arrow function works here (constant changes makes it ok)
+// const person = {
+//     firstName: 'Naruto',
+//     lastName: 'Uzumaki',
+//     fullName: function () { //arrow function doesnt work here
+//         return `${this.firstName} ${this.lastName}`
+//     },
+//     shoutName: function () {
+//         setTimeout(() => {
+//             console.log(this);
+//             console.log(this.fullName());
+//         }, 3000) //arrow function works here (constant changes makes it ok)
+//     }
+// }
+
+
+const solution = (arr) => {
+    // Type your solution here
+    let numR = 0;
+    let numL = 0;
+    let newArr = arr.filter((nums) => {
+        return nums >= 0;
+    });
+    console.log(newArr);
+    for (let i = 0; i < newArr.length; i++) {
+        if (i === 0) {
+            numR += 0;
+            console.log(numR, numL);
+        } else if (i % 2 === 0) {
+            numR += newArr[i];
+            console.log(numR, "numR");
+        } else {
+            numL += newArr[i];
+            console.log(numL, "numL");
+        }
     }
-}
+    if (numR > numL) {
+        console.log("Right");
+    } else if (numL > numR) {
+        console.log("Left");
+    } else {
+        console.log("");
+    }
+};
+solution([0])
+
