@@ -23,7 +23,7 @@
 //     tweetContainer.append(newTweet);
 // }
 
-
+// 2ND EXAMPLE
 const form = document.querySelector('form');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
