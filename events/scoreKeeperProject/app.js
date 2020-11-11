@@ -23,10 +23,10 @@ function updateScores(player, ...opponents) {
         player.score++;
     } if (player.score === winningScore) {
         isGameOver = true;
-        player.display.classList.add('has-text-success')
-        player.button.disabled = true
+        player.display.classList.add('has-text-success');
+        player.button.disabled = true;
         for (let opponent of opponents) {
-            opponent.display.classList.add('has-text-danger')
+            opponent.display.classList.add('has-text-danger');
             opponent.button.disabled = true;
         }
     }
@@ -34,16 +34,16 @@ function updateScores(player, ...opponents) {
 }
 
 player1.button.addEventListener('click', function (e) {
-    updateScores(player1, player2, player3)
+    updateScores(player1, player2, player3);
 })
 
 player2.button.addEventListener('click', function (e) {
-    updateScores(player2, player1, player3)
+    updateScores(player2, player1, player3);
 })
 
 
 player3.button.addEventListener('click', function (e) {
-    updateScores(player3, player1, player2)
+    updateScores(player3, player1, player2);
 })
 
 
@@ -51,14 +51,14 @@ winningScoreSelect.addEventListener('change', function () {
     winningScore = parseInt(this.value);
 })
 
-resetButton.addEventListener('click', reset)
+resetButton.addEventListener('click', reset);
 
 function reset() {
     isGameOver = false;
     for (let p of [player1, player2, player3]) {
         p.score = 0;
         p.display.textContent = 0;
-        p.display.classList.remove('has-text-success', 'has-text-danger')
+        p.display.classList.remove('has-text-success', 'has-text-danger');
         p.button.disabled = false;
     }
 }
