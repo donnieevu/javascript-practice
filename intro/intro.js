@@ -96,3 +96,36 @@ let comments = [
     { username: 'BballLover', text: 'ball out!!', votes: 19 }
 ]
 console.log(comments[1].username + ' commented on your post: ' + comments[1].text);
+
+
+//RANDOM INTERVIEW PRACTICE
+function consecutiveOne(arr) {
+    let currentConsec = 0;
+    let maxConsec = 0;
+    for (let i = 0; i < arr.length; i++) {
+        currentConsec = arr[i] === 1 ? currentConsec += 1 : 0; //ternary operator
+        maxConsec = maxConsec < currentConsec ? currentConsec : maxConsec; //ternary operator
+        // if (arr[i] === 1) {
+        //     currentConsec++
+        // } else {
+        //     currentConsec = 0;
+        // }
+
+        // if (maxConsec < currentConsec) {
+        //     maxConsec = currentConsec;
+        // }
+    }
+    return maxConsec;
+}
+console.log(consecutiveOne([1, 1, 0, 1, 1, 1]));
+//first i will create counter to keep track of consectives
+
+//then i will compare the numbers within the array 
+//to eachother to see if they are the same
+
+//if they are the same, i will add it to the counter
+//if they are different i will go to the next number until 
+//it hits consecutively again
+
+
+
