@@ -1,24 +1,24 @@
 //RANDOM INTERVIEW PRACTICE
 
-// function consecutiveOne(arr) {
-//     let currentConsec = 0;
-//     let maxConsec = 0;
-//     for (let i = 0; i < arr.length; i++) {
-//         currentConsec = arr[i] === 1 ? currentConsec += 1 : 0; //ternary operator
-//         maxConsec = maxConsec < currentConsec ? currentConsec : maxConsec; //ternary operator
-//         if (arr[i] === 1) {
-//             currentConsec++
-//         } else {
-//             currentConsec = 0;
-//         }
+function consecutiveOne(arr) {
+    let currentConsec = 0;
+    let maxConsec = 0;
+    for (let i = 0; i < arr.length; i++) {
+        currentConsec = arr[i] === 1 ? currentConsec += 1 : 0; //ternary operator
+        maxConsec = maxConsec < currentConsec ? currentConsec : maxConsec; //ternary operator
+        if (arr[i] === 1) {
+            currentConsec++
+        } else {
+            currentConsec = 0;
+        }
 
-//         if (maxConsec < currentConsec) {
-//             maxConsec = currentConsec;
-//         }
-//     }
-//     return maxConsec;
-// }
-// console.log(consecutiveOne([1, 1, 0, 1, 1, 1]));
+        if (maxConsec < currentConsec) {
+            maxConsec = currentConsec;
+        }
+    }
+    return maxConsec;
+}
+console.log(consecutiveOne([1, 1, 0, 1, 1, 1]));
 
 //first i will create counter to keep track of consectives
 
@@ -40,20 +40,20 @@
 // 3 steps
 // [1,1,2,3]
 
-// function upStairs(steps) {
-//     let fibArr = [1, 1];
-//     for (let i = 0; i < steps - 1; i++) {
-//         let prev = fibArr[i]
-//         let current = fibArr[i + 1]
-//         let next = prev + current;
-//         console.log('prev: ', prev);
-//         console.log('curr:', current);
-//         console.log('next: ', next);
-//         fibArr.push(next)
-//     }
-//     return fibArr[steps]
-// }
-// console.log(upStairs(6));
+function upStairs(steps) {
+    let fibArr = [1, 1];
+    for (let i = 0; i < steps - 1; i++) {
+        let prev = fibArr[i]
+        let current = fibArr[i + 1]
+        let next = prev + current;
+        console.log('prev: ', prev);
+        console.log('curr:', current);
+        console.log('next: ', next);
+        fibArr.push(next)
+    }
+    return fibArr[steps]
+}
+console.log(upStairs(6));
 
 //6
 //1 1 1 1 1 1 1
