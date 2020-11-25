@@ -114,6 +114,5 @@ function unique(arr) {
         }
     }
 }
-
 console.log(unique([1, 2, 3, 1, 3]));
 
