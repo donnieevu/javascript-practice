@@ -6,17 +6,17 @@ function consecutiveOne(arr) {
     for (let i = 0; i < arr.length; i++) {
         currentConsec = arr[i] === 1 ? currentConsec += 1 : 0; //ternary operator
         maxConsec = maxConsec < currentConsec ? currentConsec : maxConsec; //ternary operator
-        if (arr[i] === 1) {
-            currentConsec++
-        } else {
-            currentConsec = 0;
-        }
+        // if (arr[i] === 1) {
+        //     currentConsec++
+        // } else {
+        //     currentConsec = 0;
+        // }
 
-        if (maxConsec < currentConsec) {
-            maxConsec = currentConsec;
-        }
+        // if (maxConsec < currentConsec) {
+        //     maxConsec = currentConsec;
+        // }
     }
-    return maxConsec;
+    return `Max consecutive times of number: ${maxConsec}`;
 }
 console.log(consecutiveOne([1, 1, 0, 1, 1, 1]));
 
@@ -51,7 +51,7 @@ function upStairs(steps) {
         console.log('next: ', next);
         fibArr.push(next)
     }
-    return fibArr[steps]
+    return `# of possible steps to take: ${fibArr[steps]}`
 }
 console.log(upStairs(6));
 
