@@ -117,3 +117,23 @@ console.log(unique([1, 2, 3, 1, 3]));
 
 
 
+// Q4
+//given a non negative int, repeatedly sum its digits, until the sum only has 1 digit
+// i.e 123, 6
+// divide number to get last digit
+// add number to count, continue adding until solution.
+
+function digits(num) {
+    let sum = 0
+    let lastDigit = num % 10;
+    while (num !== 0) {
+        if (lastDigit !== 0) {
+            sum += lastDigit;
+            console.log('loop sum: ', sum);
+        }
+        num = Math.floor(num / 10);
+        lastDigit = num % 10;
+    }
+    return sum;
+}
+console.log('sum: ', digits(545));
