@@ -98,7 +98,6 @@ console.log(upStairs(6));
 //else, return odd element.
 
 function unique(arr) {
-    let flag = false;
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length; j++) {
             if (i === j) {
@@ -115,4 +114,6 @@ function unique(arr) {
     }
 }
 console.log(unique([1, 2, 3, 1, 3]));
+
+
 
